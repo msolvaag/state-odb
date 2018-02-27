@@ -1,0 +1,19 @@
+{
+  "name": "state-db",
+  "version": "0.0.0",
+  "description": "Normalizer and object relation manager for state based systems (redux/vuex)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msolvaag/state-db.git"
+  },
+  "author": "Magnus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/msolvaag/state-db/issues"
+  },
+  "homepage": "https://github.com/msolvaag/state-db#readme"
+}
