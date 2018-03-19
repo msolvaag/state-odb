@@ -1,0 +1,26 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "noEmitOnError": true,
+    "noEmitHelpers": false,
+    "importHelpers": false,
+    "removeComments": false,
+    "target": "es5",
+    "outDir": "./dist/cjs",
+    "sourceMap": false,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "jsx": "react",
+    "strict": true,
+    "strictNullChecks": true,
+    "alwaysStrict": true
+  },
+  "exclude": [
+    "node_modules",
+    "wwwroot",
+    "types",
+    "test",
+    "docs",
+    "examples"
+  ]
+}

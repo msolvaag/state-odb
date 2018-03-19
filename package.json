@@ -2,9 +2,15 @@
   "name": "state-odb",
   "version": "0.0.0",
   "description": "Normalizer and object relation manager for state based systems (redux/vuex)",
-  "main": "index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "typings": "./types/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run build-cjs && tape test/*.js | \"node_modules/.bin/tap-spec\"",
+    "build": "tsc && tsc -p tsconfig.cjs.json && tsc -p tsconfig.dist.json && gulp compress",
+    "build-cjs": "tsc -p tsconfig.cjs.json",
+    "build-gz": "gzip './dist/state-odb.min.js' -q -k -f",
+    "docs": "rimraf \"docs/_build/\" && python -msphinx -b html \"docs\" \"docs/_build/html\""
   },
   "repository": {
     "type": "git",
@@ -15,5 +21,16 @@
   "bugs": {
     "url": "https://github.com/msolvaag/state-odb/issues"
   },
-  "homepage": "https://github.com/msolvaag/state-odb#readme"
+  "homepage": "https://github.com/msolvaag/state-odb#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0",
+    "pump": "^1.0.2",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.9.0",
+    "tslib": "^1.9.0",
+    "typescript": "^2.7.2"
+  }
 }
