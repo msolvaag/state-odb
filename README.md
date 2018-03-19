@@ -6,6 +6,7 @@ state-odb provides a normalized state and easy object management.
 
 ## Why
 Having a normalized state is a good strategy if your data is nested in different ways. The redux documentation has a nice explanation [here](http://redux.js.org/docs/recipes/reducers/NormalizingStateShape.html).
+state-odb is a port of the redux-db project with means to decouple the term redux from the logic it provides. state-odb is compatible with all single state controlled systems. ( vuex/redux/..).
 
 ## How
 ``` javascript
